@@ -9,10 +9,14 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Switch;
+
+import java.util.ArrayList;
 
 public class HighInterestDebt extends AppCompatActivity {
     public static boolean checked;
+    ArrayList<Debt> debts = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +41,54 @@ public class HighInterestDebt extends AppCompatActivity {
             }
         });
     }
+
+    public void addDebt(View view) {
+
+        EditText highInterestDebtName = findViewById(R.id.highInterestDebtName);
+        EditText highInterestDebtAmount = findViewById(R.id.highInterestDebtAmount);
+        EditText highInterestDebtMin = findViewById(R.id.highInterestDebtMin);
+        EditText highInterestDebtRate = findViewById(R.id.highInterestDebtRate);
+
+        String debtName = "";
+        Integer debtAmount = 0, debtMin = 0, debtRate = 0;
+
+        try {
+            debtName = highInterestDebtName.getText().toString();
+        } catch (Exception E) {
+            highInterestDebtName.requestFocus();
+            highInterestDebtName.setError("Enter a name for this debt");
+        }
+
+        try {
+            debtAmount = Integer.parseInt(highInterestDebtAmount.getText().toString());
+        } catch (Exception E) {
+            highInterestDebtAmount.requestFocus();
+            highInterestDebtAmount.setError("Enter the debt amount");
+        }
+
+        try {
+            debtMin = Integer.parseInt(highInterestDebtMin.getText().toString());
+        } catch (Exception E) {
+            highInterestDebtMin.requestFocus();
+            highInterestDebtMin.setError("Enter the minimum monthly payment");
+        }
+
+        try {
+            debtRate = Integer.parseInt(highInterestDebtRate.getText().toString());
+        } catch (Exception E) {
+            highInterestDebtRate.requestFocus();
+            highInterestDebtRate.setError("Enter the current interest rate");
+        }
+
+        Debt debt = new Debt(debtName, debtAmount, debtMin, debtRate);
+        debts.add(debt);
+
+        highInterestDebtName.setText("");
+        highInterestDebtAmount.setText("");
+        highInterestDebtMin.setText("");
+        highInterestDebtRate.setText("");
+    }
+
 
     public void submitHighInterestDebt(View view) {
 

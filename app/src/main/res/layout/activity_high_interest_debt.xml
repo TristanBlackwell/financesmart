@@ -67,14 +67,14 @@
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:layout_marginBottom="32dp"
-
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/highInterestDebtButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/highInterestDebtSwitch">
 
         <EditText
-            android:id="@+id/highInterestDebtName0"
+            android:id="@+id/highInterestDebtName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -85,13 +85,13 @@
             android:ems="10"
             android:hint="@string/highInterestDebtName"
             android:inputType="textPersonName"
-            app:layout_constraintEnd_toStartOf="@+id/highInterestDebtAmount0"
+            app:layout_constraintEnd_toStartOf="@+id/highInterestDebtAmount"
             app:layout_constraintHorizontal_bias="0.08"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/highInterestDebtAmount0"
+            android:id="@+id/highInterestDebtAmount"
             android:layout_width="137dp"
             android:layout_height="45dp"
             android:layout_marginTop="16dp"
@@ -104,7 +104,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/highInterestDebtMin0"
+            android:id="@+id/highInterestDebtMin"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -115,12 +115,12 @@
             android:ems="10"
             android:hint="@string/highInterestDebtMin"
             android:inputType="textPersonName"
-            app:layout_constraintEnd_toStartOf="@+id/highInterestDebtRate0"
+            app:layout_constraintEnd_toStartOf="@+id/highInterestDebtRate"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/highInterestDebtName0" />
+            app:layout_constraintTop_toBottomOf="@+id/highInterestDebtName" />
 
         <EditText
-            android:id="@+id/highInterestDebtRate0"
+            android:id="@+id/highInterestDebtRate"
             android:layout_width="79dp"
             android:layout_height="41dp"
             android:layout_marginTop="8dp"
@@ -130,17 +130,18 @@
             android:hint="@string/highInterestDebtRate"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/highInterestDebtAmount0" />
+            app:layout_constraintTop_toBottomOf="@+id/highInterestDebtAmount" />
 
         <Button
             android:id="@+id/addDebtButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:onClick="addDebt"
             android:text="@string/addDebtButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/highInterestDebtMin0" />
+            app:layout_constraintTop_toBottomOf="@+id/highInterestDebtMin" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
