@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">FinanceSmart</string>
+    <string name="startAppButtonText">Continue</string>
+    <string name="take_home">Enter your monthly take home</string>
+    <string name="Title">Taking the reigns on your personal finance</string>
+    <string name="Description">The key to sound financial footing in life begins with knowing where your money is coming from and where it is going and the best way to begin this
+    is with budgeting. This not only involves attempting to minimise outgoings the best you can but also with figuring out your goals and what the best strategy is going forward
+    to reach those. This app is designed to help you help you realise your spending and gain knowledge on how moving forward your money may better be put to work for you.</string>
+    <string name="takehomeTitle">Starting from the beginning</string>
+    <string name="takehomeDescription">Controlling your finances begins at the source. Enter below the average total monthly net income you receive. Thats your income you see
+    coming in after those taxes but before any bills are removed such as food, rent/mortgages and council tax. We need to start with this to compare spending to income and to
+    calculate how much we can contribute to debts and goals.</string>
+    <string name="takehomeEnter">Enter</string>
+    <string name="takehomeHint">Monthly take home</string>
+    <string name="emergencyfundTitle">Forecasting a rainy day</string>
+    <string name="emergencyfundDescription">No one likes to think about it but sometimes things dont go in our favour. In the UK around 26% people have savings of less than £1,000. Take a moment to think about how long this would last you if say from tomorrow your income disappeared. Stashing away an \'emergency fund\' is vital to protecting yourself and family from loss of income or unexpected bills such as a car breakdown. Depending on your risk appetite this amount should be between a months outgoings up to 6 months. This not only helps avoid panicking in desperate times this will allow you to avoid dangerous pay day loans or borrowing and instead gives you peace of mind. Enter below the amount you currently have saved and lets see how much you might more you might need to put away or if you on track</string>
+    <string name="emergencyfundHint">Emergency fund saved</string>
+    <string name="emergencyfundEnter">Enter</string>
+    <string name="outgoingsTitle">Where did that paycheck go?</string>
+    <string name="outgoingsDescription">Have you ever looked at your account and wondered why your balance never seems to be going up? This is down to one simple fact but
+        one that we often turn a blind eye to or do not realise. Your outgoing payments are greater than the incoming ones! This can be down to many factors but is a recipe
+        for future disaster if not remedied. In the box below input your average monthly spend or all the payments coming out of your accounts such as debts, internet, car payments
+        clothes, coffees etc.</string>
+    <string name="outgoingsHint">Monthly outgoings</string>
+    <string name="highInterestDebtTitle">Money pits</string>
+    <string name="highInterestDebtDescription">Before anyone can think about long term saving and investing its best to remove any short term leaks and get debts payed off. enter yes or no below if you have any high interest debt (>4%) excluding student loans</string>
+    <string name="highInterestDebtButton">Continue</string>
+    <string name="highInterestDebtSwitchNo">No</string>
+    <string name="highInterestDebSwitchYes">Yes</string>
+    <string name="HighInterestDebt">High Interest Debt</string>
+    <string name="pensionSchemeTitle">Thinking of the future</string>
+    <string name="pensionSchemeDescription">For many people retirement feels like another lifetime away but it is never too early to consider your future self. The best thing you can do for this is to ensure you are enrolled in a pension scheme for your workplace and recieving the best contributions you can from your employer. This will set you up great for later life and if you already doing this then thats great! Enter below if you know whether or not your giving the max contributions to your workplace pension</string>
+    <string name="pensionSchemeToggle">Pension scheme contribution</string>
+    <string name="pensionSchemeToggleYes">Yes</string>
+    <string name="pensionSchemeToggleNo">No</string>
+    <string name="pensionSchemeButton">Continue</string>
+    <string name="firstHomeTitle">Flying the nest</string>
+    <string name="firstHomeDescription">Purchasing a house is often the top priority for many people and likely to be the biggest purchase they will make in their lives. Saving for a deposit and any relevant fees can depend on time frames and cost so it can be reassuring to know you are saving in the most effective way possible for the future. Enter below if you are saving currently for your first home along with the time frame in which you intend to purchase.</string>
+    <string name="firstHomeSwitchYes">Yes</string>
+    <string name="firstHomeSwitchNo">No</string>
+    <string name="firstHomeSwitch">Saving for your first Home?</string>
+    <string name="firstHomeInput">Years until purchase</string>
+    <string name="firstHomeButton">Continue</string>
+    <string name="highInterestDebtName">Debt name</string>
+    <string name="highInterestDebtMin">Min payment</string>
+    <string name="highInterestDebtRate">%</string>
+    <string name="highInterestDebtAmount">Amount to pay</string>
+    <string name="addDebtButton">Add</string>
+</resources>
