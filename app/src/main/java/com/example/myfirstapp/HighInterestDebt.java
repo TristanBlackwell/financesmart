@@ -4,13 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.constraintlayout.widget.Group;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
+import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Switch;
+
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -22,21 +28,18 @@ public class HighInterestDebt extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_high_interest_debt);
 
-
         Switch debtSwitch = findViewById(R.id.highInterestDebtSwitch);
         debtSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 checked = isChecked;
-                System.out.print(isChecked);
 
+                //
                 ConstraintLayout highInterestDebt0 = (ConstraintLayout) findViewById(R.id.highInterestDebt0);
                 if (isChecked) {
                     highInterestDebt0.setVisibility(View.VISIBLE);
-                    System.out.println("visible");
                 } else {
-                    highInterestDebt0.setVisibility(View.INVISIBLE);
-                    System.out.println("invisible");
+                    highInterestDebt0.setVisibility(View.GONE);
                 }
             }
         });
@@ -80,21 +83,39 @@ public class HighInterestDebt extends AppCompatActivity {
             highInterestDebtRate.setError("Enter the current interest rate");
         }
 
-        Debt debt = new Debt(debtName, debtAmount, debtMin, debtRate);
-        debts.add(debt);
+        if (!debtName.equals("") && debtAmount > 0 && debtMin >= 0 && debtRate >= 0) {
+            Debt debt = new Debt(debtName, debtAmount, debtMin, debtRate);
+            debts.add(debt);
 
-        highInterestDebtName.setText("");
-        highInterestDebtAmount.setText("");
-        highInterestDebtMin.setText("");
-        highInterestDebtRate.setText("");
+            // construct listview for inputted debts
+            ListView debtList = findViewById(R.id.debtList);
+            DebtAdapter debtAdapter = new DebtAdapter(this, debts);
+            debtList.setAdapter(debtAdapter);
+
+            // Clear inputs, remove focus and collapse keyboard
+            highInterestDebtName.setText("");
+            highInterestDebtAmount.setText("");
+            highInterestDebtMin.setText("");
+            highInterestDebtRate.setText("");
+            highInterestDebtRate.clearFocus();
+            InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+        }
     }
 
 
     public void submitHighInterestDebt(View view) {
 
+        System.out.println(debts);
         SharedPreferences store = getApplicationContext().getSharedPreferences("store", MODE_PRIVATE);
         SharedPreferences.Editor editor = store.edit();
         editor.putBoolean("highInterestDebt", checked);
+
+        // Convert debt object arraylist to json for storage in SP
+        Gson gson = new Gson();
+        String json = gson.toJson(debts);
+        editor.putString("debtlist", json);
+
         editor.apply();
 
         Intent firstHome = new Intent(this, FirstHome.class);

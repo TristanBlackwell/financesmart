@@ -11,7 +11,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".FirstHome"></activity>
         <activity android:name=".PensionScheme" />
-        <activity android:name=".HighInterestDebt" />
+        <activity android:name=".HighInterestDebt"
+            android:windowSoftInputMode="adjustPan"/>
         <activity
             android:name=".Outgoings"
             android:parentActivityName=".Takehome">

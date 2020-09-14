@@ -46,4 +46,5 @@
     <string name="highInterestDebtRate">%</string>
     <string name="highInterestDebtAmount">Amount to pay</string>
     <string name="addDebtButton">Add</string>
+    <string name="delDebtButton">X</string>
 </resources>
