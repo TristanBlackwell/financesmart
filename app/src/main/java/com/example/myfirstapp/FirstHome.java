@@ -27,6 +27,13 @@ public class FirstHome extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 checked = isChecked;
+
+                EditText firstHomeInput = findViewById(R.id.firstHomeInput);
+                if (isChecked) {
+                    firstHomeInput.setVisibility(View.VISIBLE);
+                } else {
+                    firstHomeInput.setVisibility(View.GONE);
+                }
             }
         });
     }
@@ -38,7 +45,6 @@ public class FirstHome extends AppCompatActivity {
 
         SharedPreferences store = getApplicationContext().getSharedPreferences("store", MODE_PRIVATE);
         SharedPreferences.Editor editor = store.edit();
-        editor.putBoolean("firstHome", checked);
         editor.putInt("firstHomeYears", firstHomeYears);
         editor.apply();
     }
