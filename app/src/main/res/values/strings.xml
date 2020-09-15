@@ -53,4 +53,9 @@
     <string name="shortTermContinue">Continue</string>
     <string name="shortTermToggleYes">Yes</string>
     <string name="shortTermToggleNo">No</string>
+    <string name="longTermTitle">Thinking further ahead</string>
+    <string name="longTermDescription">As we mentioned earlier about setting up your workplace pensions and ensuring maximum contributions, Thinking of the future is absolutely vital to not only look after your future self but give your current self piece of mind and reassurance. Enter below if you have any longer terms goals and whether these occur before or after you reach retirement account so we can find the best options.</string>
+    <string name="longTermSwitch">Long term goals? (More than 5 years)</string>
+    <string name="longTermSwitchAge">After retirement age? (~58)</string>
+    <string name="longTermContinue">Continue</string>
 </resources>

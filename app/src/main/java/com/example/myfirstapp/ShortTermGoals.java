@@ -2,6 +2,7 @@ package com.example.myfirstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -30,5 +31,8 @@ public class ShortTermGoals extends AppCompatActivity {
         SharedPreferences.Editor editor = store.edit();
         editor.putBoolean("shortTermGoals", checked);
         editor.apply();
+
+        Intent longTermGoals = new Intent(this, LongTermGoals.class);
+        startActivity(longTermGoals);
     }
 }
