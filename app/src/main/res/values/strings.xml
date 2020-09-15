@@ -47,4 +47,10 @@
     <string name="highInterestDebtAmount">Amount to pay</string>
     <string name="addDebtButton">Add</string>
     <string name="delDebtButton">X</string>
+    <string name="shortTermTitle">Setting up goals</string>
+    <string name="shortTermDescription">Having something to work towards is key for motivating to save and show yourself that you can be financially responsible. Enter below if you have any short term goals ( less than 5 years and excluding buying a home).</string>
+    <string name="shortTermToggle">Short term goals?</string>
+    <string name="shortTermContinue">Continue</string>
+    <string name="shortTermToggleYes">Yes</string>
+    <string name="shortTermToggleNo">No</string>
 </resources>

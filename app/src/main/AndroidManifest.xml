@@ -9,10 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FirstHome"></activity>
+        <activity android:name=".ShortTermGoals"></activity>
+        <activity android:name=".FirstHome" />
         <activity android:name=".PensionScheme" />
-        <activity android:name=".HighInterestDebt"
-            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".HighInterestDebt"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".Outgoings"
             android:parentActivityName=".Takehome">

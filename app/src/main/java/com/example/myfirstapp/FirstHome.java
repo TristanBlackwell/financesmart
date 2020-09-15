@@ -2,6 +2,7 @@ package com.example.myfirstapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -47,5 +48,8 @@ public class FirstHome extends AppCompatActivity {
         SharedPreferences.Editor editor = store.edit();
         editor.putInt("firstHomeYears", firstHomeYears);
         editor.apply();
+
+        Intent shortTermGoals = new Intent(this, ShortTermGoals.class);
+        startActivity(shortTermGoals);
     }
 }
