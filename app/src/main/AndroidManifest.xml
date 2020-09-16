@@ -10,25 +10,29 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".Summary"
+            android:label="@string/title_activity_summary"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".LongTermGoals"
             android:parentActivityName=".ShortTermGoals">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ShortTermGoals"/>
+                android:value=".ShortTermGoals" />
         </activity>
         <activity
             android:name=".ShortTermGoals"
             android:parentActivityName=".FirstHome">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".FirstHome"/>
+                android:value=".FirstHome" />
         </activity>
         <activity
             android:name=".FirstHome"
             android:parentActivityName=".HighInterestDebt">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".HighInterestDebt"/>
+                android:value=".HighInterestDebt" />
         </activity>
         <activity
             android:name=".PensionScheme"
@@ -43,7 +47,7 @@
             android:windowSoftInputMode="adjustPan">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".PensionScheme"/>
+                android:value=".PensionScheme" />
         </activity>
         <activity
             android:name=".Outgoings"
