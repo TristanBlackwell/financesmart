@@ -8,17 +8,22 @@ import android.view.View;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.List;
+
 public class LongTermGoals extends AppCompatActivity {
     public static boolean longTermChecked, longTermAgeChecked;
-
-    // Declare global for access within inner class
-    Switch longTermSwitch = findViewById(R.id.longTermSwitch);
-    Switch longTermSwitchAge = findViewById(R.id.longTermSwitchAge);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_long_term_goals);
+
+        Switch longTermSwitch = findViewById(R.id.longTermSwitch);
+        final Switch longTermSwitchAge = findViewById(R.id.longTermSwitchAge);
 
         longTermSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

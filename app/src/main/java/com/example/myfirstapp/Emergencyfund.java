@@ -18,10 +18,10 @@ public class Emergencyfund extends AppCompatActivity {
     public void submitEmergencyFund(View view) {
 
         EditText emergencyfundInput = findViewById(R.id.emergencyfundInput);
-        Integer emergencyfundValue = 0;
+        Integer emergencyfundValue = -5;
 
         try {
-            Integer.parseInt(emergencyfundInput.getText().toString());
+            emergencyfundValue = Integer.parseInt(emergencyfundInput.getText().toString());
         } catch (Exception e) {
             emergencyfundInput.requestFocus();
             emergencyfundInput.setError("Please enter your saved amount");

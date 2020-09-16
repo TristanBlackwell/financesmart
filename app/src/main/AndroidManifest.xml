@@ -9,13 +9,42 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LongTermGoals"></activity>
-        <activity android:name=".ShortTermGoals" />
-        <activity android:name=".FirstHome" />
-        <activity android:name=".PensionScheme" />
+        <activity
+            android:name=".LongTermGoals"
+            android:parentActivityName=".ShortTermGoals">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ShortTermGoals"/>
+        </activity>
+        <activity
+            android:name=".ShortTermGoals"
+            android:parentActivityName=".FirstHome">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".FirstHome"/>
+        </activity>
+        <activity
+            android:name=".FirstHome"
+            android:parentActivityName=".HighInterestDebt">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".HighInterestDebt"/>
+        </activity>
+        <activity
+            android:name=".PensionScheme"
+            android:parentActivityName=".Emergencyfund">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Emergencyfund" />
+        </activity>
         <activity
             android:name=".HighInterestDebt"
-            android:windowSoftInputMode="adjustPan" />
+            android:parentActivityName=".PensionScheme"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".PensionScheme"/>
+        </activity>
         <activity
             android:name=".Outgoings"
             android:parentActivityName=".Takehome">
