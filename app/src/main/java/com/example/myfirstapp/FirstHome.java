@@ -42,14 +42,25 @@ public class FirstHome extends AppCompatActivity {
     public void submitFirstHome(View view) {
 
         EditText firstHomeInput = findViewById(R.id.firstHomeInput);
-        Integer firstHomeYears = Integer.parseInt(firstHomeInput.getText().toString());
+        Integer firstHomeYears = -1;
 
-        SharedPreferences store = getApplicationContext().getSharedPreferences("store", MODE_PRIVATE);
-        SharedPreferences.Editor editor = store.edit();
-        editor.putInt("firstHomeYears", firstHomeYears);
-        editor.apply();
+        if (checked) {
+            try {
+                firstHomeYears = Integer.parseInt(firstHomeInput.getText().toString());
+            } catch (Exception e) {
+                firstHomeInput.requestFocus();
+                firstHomeInput.setError("Number of years until planned purchase");
+            }
+        }
 
-        Intent shortTermGoals = new Intent(this, ShortTermGoals.class);
-        startActivity(shortTermGoals);
+        if (firstHomeYears >= 0) {
+            SharedPreferences store = getApplicationContext().getSharedPreferences("store", MODE_PRIVATE);
+            SharedPreferences.Editor editor = store.edit();
+            editor.putInt("firstHomeYears", firstHomeYears);
+            editor.apply();
+
+            Intent shortTermGoals = new Intent(this, ShortTermGoals.class);
+            startActivity(shortTermGoals);
+        }
     }
 }

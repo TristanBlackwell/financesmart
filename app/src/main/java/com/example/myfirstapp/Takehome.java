@@ -26,7 +26,7 @@ public class Takehome extends AppCompatActivity {
             takehomeValue = Integer.parseInt(takehomeInput.getText().toString());
         } catch (Exception e) {
             takehomeInput.requestFocus();
-            takehomeInput.setError("Please enter a number");
+            takehomeInput.setError("Please enter your take home");
         }
 
         if(takehomeValue  > 0) {
@@ -42,7 +42,7 @@ public class Takehome extends AppCompatActivity {
             startActivity(Outgoings);
         } else {
             takehomeInput.requestFocus();
-            takehomeInput.setError("Enter your take home");
+            takehomeInput.setError("Please enter your take home");
         }
     }
 }

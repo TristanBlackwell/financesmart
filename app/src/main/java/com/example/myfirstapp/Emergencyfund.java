@@ -18,7 +18,7 @@ public class Emergencyfund extends AppCompatActivity {
     public void submitEmergencyFund(View view) {
 
         EditText emergencyfundInput = findViewById(R.id.emergencyfundInput);
-        Integer emergencyfundValue = -5;
+        Integer emergencyfundValue = -1;
 
         try {
             emergencyfundValue = Integer.parseInt(emergencyfundInput.getText().toString());
@@ -37,7 +37,7 @@ public class Emergencyfund extends AppCompatActivity {
             startActivity(pensionScheme);
         } else {
             emergencyfundInput.requestFocus();
-            emergencyfundInput.setError("Please enter a valid amount");
+            emergencyfundInput.setError("Please enter your saved amount");
         }
 
 
