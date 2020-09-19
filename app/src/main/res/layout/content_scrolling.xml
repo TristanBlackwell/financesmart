@@ -8,10 +8,89 @@
     tools:context=".Summary"
     tools:showIn="@layout/activity_summary">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/takeHomeSummary"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:text="@string/large_text" />
+        android:orientation="vertical">
 
+        <TextView
+            android:id="@+id/takeHomeSummaryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/takeHomeSummaryTitle" />
+
+        <TextView
+            android:id="@+id/takeHomeSummaryValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" />
+
+        <View
+            android:layout_height="2dp"
+            android:layout_width="match_parent"
+            android:background="#c0c0c0"/>
+
+        <TextView
+            android:id="@+id/outgoingsSummaryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/outgoingsSummaryTitle" />
+
+        <TextView
+            android:id="@+id/outgoingsSummaryValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" />
+
+        <TextView
+            android:id="@+id/outgoingsSummaryDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingTop="5dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="5dp" />
+
+        <View
+            android:layout_height="2dp"
+            android:layout_width="match_parent"
+            android:background="#c0c0c0"/>
+
+        <TextView
+            android:id="@+id/emergencyFundSummaryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/emergencyFundSummaryTitle" />
+
+        <TextView
+            android:id="@+id/emergencyFundSummaryValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" />
+
+        <TextView
+            android:id="@+id/emergencyFundSummaryDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingTop="5dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="5dp" />
+    </LinearLayout>
 </androidx.core.widget.NestedScrollView>

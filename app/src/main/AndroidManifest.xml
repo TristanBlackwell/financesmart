@@ -12,7 +12,12 @@
         <activity
             android:name=".Summary"
             android:label="@string/title_activity_summary"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".LongTermGoals">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LongTermGoals"/>
+        </activity>
         <activity
             android:name=".LongTermGoals"
             android:parentActivityName=".ShortTermGoals">

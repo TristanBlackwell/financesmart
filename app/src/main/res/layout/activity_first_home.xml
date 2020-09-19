@@ -48,8 +48,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:ems="10"
+        android:hint="@string/firstHomeInput"
         android:inputType="textPersonName"
-        android:text="@string/firstHomeInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstHomeSwitch" />
