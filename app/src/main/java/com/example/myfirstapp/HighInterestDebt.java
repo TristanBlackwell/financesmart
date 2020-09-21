@@ -34,7 +34,7 @@ public class HighInterestDebt extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
                 checked = isChecked;
 
-                //
+                // Only display input if user requires it
                 ConstraintLayout highInterestDebt0 = (ConstraintLayout) findViewById(R.id.highInterestDebt0);
                 if (isChecked) {
                     highInterestDebt0.setVisibility(View.VISIBLE);
@@ -53,7 +53,7 @@ public class HighInterestDebt extends AppCompatActivity {
         EditText highInterestDebtRate = findViewById(R.id.highInterestDebtRate);
 
         String debtName = "";
-        Integer debtAmount = 0, debtMin = 0, debtRate = 0;
+        int debtAmount = 0, debtMin = 0, debtRate = 0;
 
         try {
             debtName = highInterestDebtName.getText().toString();
@@ -111,7 +111,7 @@ public class HighInterestDebt extends AppCompatActivity {
         SharedPreferences.Editor editor = store.edit();
         editor.putBoolean("highInterestDebt", checked);
 
-        // Convert debt object arraylist to json for storage in SP
+        // Convert debts arraylist to json for storage in SP (converted back when used
         Gson gson = new Gson();
         String json = gson.toJson(debts);
         editor.putString("debtlist", json);
