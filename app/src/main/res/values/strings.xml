@@ -77,4 +77,7 @@
     <string name="firstHomeSummaryTitle">Joining the property ladder</string>
     <string name="debtsPresentSummary">It looks like you have some higher interest debts that could do with wiping out to restore some of your monthly income. Click the get advice button below to find out how to tackle these debts best.</string>
     <string name="debtsAbsentSummary">You didn\'t enter any high interest debts previously. Thats great and we should aim to keep it this way if we can due to their potential drain on incomes</string>
+    <string name="noFirstHome">You don\'t need to worry about this section!</string>
+    <string name="longTermFirstHome">You\'ve entered that it will be around %d years until you purchase your first home. This is fairly long term and that money otherwise set in a savings or current account could be gaining more value. Consider a LISA for a 25%% bonus on up to £4000 a year and the rest could go placed into an index fund.</string>
+    <string name="shortTermFirstHome">%d years isn\'t long term enough to be considering higher risk methods of gaining value. Aim to keep your deposit in a savings account with a respectable interest rate until you need the cash. You can still benefit from a LISA too if you aren\'t already!</string>
 </resources>

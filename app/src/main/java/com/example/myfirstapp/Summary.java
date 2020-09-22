@@ -16,7 +16,6 @@ import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Summary extends AppCompatActivity {
 
@@ -95,7 +94,15 @@ public class Summary extends AppCompatActivity {
             debtSummaryDescription.setText(getResources().getString(R.string.debtsAbsentSummary));
         }
 
-
+        TextView firstHomeSummaryDescription = findViewById(R.id.firstHomeSummaryDescription);
+        int firstHomeYears = store.getInt("firstHomeYears", -1);
+        if (firstHomeYears < 0) {
+            firstHomeSummaryDescription.setText(getResources().getString(R.string.noFirstHome));
+        } else if (firstHomeYears > 6) {
+            firstHomeSummaryDescription.setText(getResources().getString(R.string.longTermFirstHome, firstHomeYears));
+        } else {
+            firstHomeSummaryDescription.setText(getResources().getString(R.string.shortTermFirstHome, firstHomeYears));
+        }
     }
 
     public void startDebtAdvice(View view) {

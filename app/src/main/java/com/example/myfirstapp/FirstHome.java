@@ -53,15 +53,12 @@ public class FirstHome extends AppCompatActivity {
             }
         }
 
-        if (firstHomeYears >= 0) {
-            SharedPreferences store = getApplicationContext().getSharedPreferences("store", MODE_PRIVATE);
-            SharedPreferences.Editor editor = store.edit();
-            editor.putBoolean("firstHome", checked);
-            editor.putInt("firstHomeYears", firstHomeYears);
-            editor.apply();
+        SharedPreferences store = getApplicationContext().getSharedPreferences("store", MODE_PRIVATE);
+        SharedPreferences.Editor editor = store.edit();
+        editor.putInt("firstHomeYears", firstHomeYears);
+        editor.apply();
 
-            Intent shortTermGoals = new Intent(this, ShortTermGoals.class);
-            startActivity(shortTermGoals);
-        }
+        Intent shortTermGoals = new Intent(this, ShortTermGoals.class);
+        startActivity(shortTermGoals);
     }
 }
