@@ -130,6 +130,15 @@
             android:paddingBottom="10dp"
             android:text="@string/debtSummaryTitle" />
 
+        <TextView
+            android:id="@+id/debtSummaryDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingTop="5dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="5dp" />
+
         <ListView
             android:id="@+id/debtListSummary"
             android:layout_width="match_parent"
@@ -154,5 +163,27 @@
             android:text="@string/debtSummaryButton"
             android:visibility="gone" />
 
+        <View
+            android:layout_height="2dp"
+            android:layout_width="match_parent"
+            android:background="#c0c0c0"/>
+
+        <TextView
+            android:id="@+id/firstHomeSummaryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/firstHomeSummaryTitle" />
+
+        <TextView
+            android:id="@+id/firstHomeSummaryDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingTop="5dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="5dp" />
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

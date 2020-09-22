@@ -20,7 +20,7 @@ public class Takehome extends AppCompatActivity {
     public void SubmitTakeHome(View view) {
 
         EditText takehomeInput = findViewById(R.id.takehomeInput);
-        Integer takehomeValue = 0;
+        int takehomeValue = 0;
 
         try {
             takehomeValue = Integer.parseInt(takehomeInput.getText().toString());

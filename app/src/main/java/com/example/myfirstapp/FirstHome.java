@@ -42,7 +42,7 @@ public class FirstHome extends AppCompatActivity {
     public void submitFirstHome(View view) {
 
         EditText firstHomeInput = findViewById(R.id.firstHomeInput);
-        Integer firstHomeYears = -1;
+        int firstHomeYears = -1;
 
         if (checked) {
             try {
@@ -56,6 +56,7 @@ public class FirstHome extends AppCompatActivity {
         if (firstHomeYears >= 0) {
             SharedPreferences store = getApplicationContext().getSharedPreferences("store", MODE_PRIVATE);
             SharedPreferences.Editor editor = store.edit();
+            editor.putBoolean("firstHome", checked);
             editor.putInt("firstHomeYears", firstHomeYears);
             editor.apply();
 

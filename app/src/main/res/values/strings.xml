@@ -74,4 +74,7 @@
     <string name="pensionSummaryBad">You\'ve stated you dont yet give your maximum contribution or are unsure. Make it your mission to find out what your employer offers and look into getting the benefits of this scheme!</string>
     <string name="debtSummaryTitle">Draining debts</string>
     <string name="debtSummaryButton">Get advice</string>
+    <string name="firstHomeSummaryTitle">Joining the property ladder</string>
+    <string name="debtsPresentSummary">It looks like you have some higher interest debts that could do with wiping out to restore some of your monthly income. Click the get advice button below to find out how to tackle these debts best.</string>
+    <string name="debtsAbsentSummary">You didn\'t enter any high interest debts previously. Thats great and we should aim to keep it this way if we can due to their potential drain on incomes</string>
 </resources>

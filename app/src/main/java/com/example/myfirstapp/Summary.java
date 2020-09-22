@@ -82,14 +82,20 @@ public class Summary extends AppCompatActivity {
         ListView debtListSummary = findViewById(R.id.debtListSummary);
         debtListSummary.setAdapter(debtAdapter);
 
+        TextView debtSummaryDescription = findViewById(R.id.debtSummaryDescription);
         Button debtSummaryButton = findViewById(R.id.debtSummaryButton);
 
+        // If user has debts provide access to debt advice activity
         assert debtList != null;
         if (debtList.size() > 0) {
             debtSummaryButton.setVisibility(View.VISIBLE);
+            debtSummaryDescription.setText(getResources().getString(R.string.debtsPresentSummary));
         } else {
             debtSummaryButton.setVisibility(View.GONE);
+            debtSummaryDescription.setText(getResources().getString(R.string.debtsAbsentSummary));
         }
+
+
     }
 
     public void startDebtAdvice(View view) {
