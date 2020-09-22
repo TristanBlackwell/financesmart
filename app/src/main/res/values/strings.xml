@@ -72,4 +72,6 @@
     <string name="pensionSummaryTitle">Pension Contributions</string>
     <string name="pensionSummaryGood">You stated that you apply the maximum contribution to your workplace pension including matched contributions. This is great news and is sure you set you up well for the future should you continue.</string>
     <string name="pensionSummaryBad">You\'ve stated you dont yet give your maximum contribution or are unsure. Make it your mission to find out what your employer offers and look into getting the benefits of this scheme!</string>
+    <string name="debtSummaryTitle">Draining debts</string>
+    <string name="debtSummaryButton">Get advice</string>
 </resources>

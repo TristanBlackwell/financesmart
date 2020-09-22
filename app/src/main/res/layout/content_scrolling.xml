@@ -116,5 +116,43 @@
             android:paddingRight="25dp"
             android:paddingBottom="5dp" />
 
+        <View
+            android:layout_height="2dp"
+            android:layout_width="match_parent"
+            android:background="#c0c0c0"/>
+
+        <TextView
+            android:id="@+id/debtSummaryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/debtSummaryTitle" />
+
+        <ListView
+            android:id="@+id/debtListSummary"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="25dp"
+            android:paddingTop="5dp"
+            android:paddingRight="25dp"
+            android:paddingBottom="5dp">
+
+        </ListView>
+
+        <Button
+            android:id="@+id/debtSummaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_horizontal"
+            android:onClick="startDebtAdvice"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/debtSummaryButton"
+            android:visibility="gone" />
+
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

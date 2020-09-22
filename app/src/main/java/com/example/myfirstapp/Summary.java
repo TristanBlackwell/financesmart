@@ -1,11 +1,22 @@
 package com.example.myfirstapp;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.view.View;
+import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Summary extends AppCompatActivity {
 
@@ -59,5 +70,32 @@ public class Summary extends AppCompatActivity {
         } else {
             pensionSummaryDescription.setText(getResources().getString(R.string.pensionSummaryBad));
         }
+
+        // Get arraylist stored as string in SP and convert back to ArrayList for view
+        Gson gson = new Gson();
+        String json = store.getString("debtlist", "");
+        Type type = new TypeToken<ArrayList<Debt>>(){}.getType();
+        ArrayList<Debt> debtList = gson.fromJson(json, type);
+
+        // Display debts previously entered
+        DebtAdapter debtAdapter = new DebtAdapter(this, debtList);
+        ListView debtListSummary = findViewById(R.id.debtListSummary);
+        debtListSummary.setAdapter(debtAdapter);
+
+        Button debtSummaryButton = findViewById(R.id.debtSummaryButton);
+
+        assert debtList != null;
+        if (debtList.size() > 0) {
+            debtSummaryButton.setVisibility(View.VISIBLE);
+        } else {
+            debtSummaryButton.setVisibility(View.GONE);
+        }
     }
+
+    public void startDebtAdvice(View view) {
+
+        Intent debtAdvice = new Intent(this, DebtAdvice.class);
+        startActivity(debtAdvice);
+    }
+
 }
