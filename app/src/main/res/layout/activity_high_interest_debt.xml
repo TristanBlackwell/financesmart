@@ -15,7 +15,11 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:fontFamily="@font/alegreya_black"
         android:text="@string/highInterestDebtTitle"
+        android:textColor="#CF4216"
+        android:textColorLink="#FFFFFF"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +33,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:fontFamily="@font/roboto_medium"
         android:text="@string/highInterestDebtDescription"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/highInterestDebtTitle" />
@@ -41,6 +47,8 @@
         android:layout_marginBottom="16dp"
         android:onClick="submitHighInterestDebt"
         android:text="@string/highInterestDebtButton"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#FFCF4216"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -51,6 +59,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/HighInterestDebt"
+        android:textColor="#CF4216"
         android:textOff="@string/highInterestDebtSwitchNo"
         android:textOn="@string/highInterestDebSwitchYes"
         app:layout_constraintEnd_toEndOf="parent"
@@ -85,6 +94,7 @@
             android:ems="10"
             android:hint="@string/highInterestDebtName"
             android:inputType="textPersonName"
+            android:textColorHint="#CF4216"
             app:layout_constraintEnd_toStartOf="@+id/highInterestDebtAmount"
             app:layout_constraintHorizontal_bias="0.08"
             app:layout_constraintStart_toStartOf="parent"
@@ -100,6 +110,7 @@
             android:ems="10"
             android:hint="@string/highInterestDebtAmount"
             android:inputType="textPersonName"
+            android:textColorHint="#CF4216"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -115,6 +126,8 @@
             android:ems="10"
             android:hint="@string/highInterestDebtMin"
             android:inputType="textPersonName"
+            android:textColorHint="#CF4216"
+            android:textColorLink="#FFFFFF"
             app:layout_constraintEnd_toStartOf="@+id/highInterestDebtRate"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/highInterestDebtName" />
@@ -129,6 +142,7 @@
             android:ems="10"
             android:hint="@string/highInterestDebtRate"
             android:inputType="textPersonName"
+            android:textColorHint="#CF4216"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/highInterestDebtAmount" />
 
@@ -139,6 +153,8 @@
             android:layout_marginTop="16dp"
             android:onClick="addDebt"
             android:text="@string/addDebtButton"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#FFCF4216"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/highInterestDebtMin" />

@@ -15,7 +15,11 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
+        android:fontFamily="@font/alegreya_black"
         android:text="@string/outgoingsTitle"
+        android:textColor="#AF2B2B"
+        android:textColorLink="#F61A1A"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -29,7 +33,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
+        android:fontFamily="@font/roboto_medium"
         android:text="@string/outgoingsDescription"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Outgoings" />
@@ -38,15 +44,17 @@
         android:id="@+id/outgoingsInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:ems="10"
         android:hint="@string/outgoingsHint"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toStartOf="@+id/outgoingsEnter"
+        android:textColorHint="#AF2B2B"
+        android:textColorLink="#AF2B2B"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/outgoingsDescription" />
 
@@ -55,11 +63,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:onClick="submitOutgoings"
         android:text="@string/takehomeEnter"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#FFAF2B2B"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outgoingsDescription" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outgoingsInput" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
