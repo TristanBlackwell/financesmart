@@ -18,10 +18,12 @@
             android:id="@+id/takeHomeSummaryTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/bentham"
             android:gravity="center"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="@string/takeHomeSummaryTitle" />
+            android:text="@string/takeHomeSummaryTitle"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/takeHomeSummaryValue"
@@ -40,10 +42,12 @@
             android:id="@+id/outgoingsSummaryTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/bentham"
             android:gravity="center"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="@string/outgoingsSummaryTitle" />
+            android:text="@string/outgoingsSummaryTitle"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/outgoingsSummaryValue"
@@ -71,10 +75,12 @@
             android:id="@+id/emergencyFundSummaryTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/bentham"
             android:gravity="center"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="@string/emergencyFundSummaryTitle" />
+            android:text="@string/emergencyFundSummaryTitle"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/emergencyFundSummaryValue"
@@ -102,10 +108,12 @@
             android:id="@+id/pensionSummaryTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/bentham"
             android:gravity="center"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="@string/pensionSummaryTitle" />
+            android:text="@string/pensionSummaryTitle"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/pensionSummaryDescription"
@@ -121,47 +129,68 @@
             android:layout_width="match_parent"
             android:background="#c0c0c0"/>
 
-        <TextView
-            android:id="@+id/debtSummaryTitle"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"
-            android:text="@string/debtSummaryTitle" />
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/debtSummaryDescription"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingLeft="25dp"
-            android:paddingTop="5dp"
-            android:paddingRight="25dp"
-            android:paddingBottom="5dp" />
+            <TextView
+                android:id="@+id/debtSummaryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/bentham"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/debtSummaryTitle"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/debtSummaryDescription"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <ListView
-            android:id="@+id/debtListSummary"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:paddingLeft="25dp"
-            android:paddingTop="5dp"
-            android:paddingRight="25dp"
-            android:paddingBottom="5dp">
+            <TextView
+                android:id="@+id/debtSummaryDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="25dp"
+                android:paddingTop="5dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/debtSummaryButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-        </ListView>
+            <Button
+                android:id="@+id/debtSummaryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="39dp"
+                android:gravity="center|center_horizontal"
+                android:onClick="startDebtAdvice"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:text="@string/debtSummaryButton"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/debtListSummary" />
 
-        <Button
-            android:id="@+id/debtSummaryButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center|center_horizontal"
-            android:onClick="startDebtAdvice"
-            android:paddingLeft="10dp"
-            android:paddingTop="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="10dp"
-            android:text="@string/debtSummaryButton"
-            android:visibility="gone" />
+            <ListView
+                android:id="@+id/debtListSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="25dp"
+                android:paddingTop="5dp"
+                android:paddingRight="25dp"
+                android:paddingBottom="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/debtSummaryDescription">
+
+            </ListView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
             android:layout_height="2dp"
@@ -172,10 +201,12 @@
             android:id="@+id/firstHomeSummaryTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/bentham"
             android:gravity="center"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:text="@string/firstHomeSummaryTitle" />
+            android:text="@string/firstHomeSummaryTitle"
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/firstHomeSummaryDescription"

@@ -14,11 +14,13 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.io.Serializable;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class Summary extends AppCompatActivity {
 
+    ArrayList<Debt> debtList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,7 +76,7 @@ public class Summary extends AppCompatActivity {
         Gson gson = new Gson();
         String json = store.getString("debtlist", "");
         Type type = new TypeToken<ArrayList<Debt>>(){}.getType();
-        ArrayList<Debt> debtList = gson.fromJson(json, type);
+        debtList = gson.fromJson(json, type);
 
         // Display debts previously entered
         DebtAdapter debtAdapter = new DebtAdapter(this, debtList);
