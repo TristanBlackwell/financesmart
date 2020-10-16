@@ -105,6 +105,25 @@ public class Summary extends AppCompatActivity {
         } else {
             firstHomeSummaryDescription.setText(getResources().getString(R.string.shortTermFirstHome, firstHomeYears));
         }
+
+        TextView shortTermSummaryDescription = findViewById(R.id.shortTermSummaryDescription);
+        boolean shortTermGoals = store.getBoolean("shortTermGoals", false);
+        if  (shortTermGoals) {
+            shortTermSummaryDescription.setText(getResources().getString(R.string.shortTermSummaryDescriptionYes));
+        } else {
+            shortTermSummaryDescription.setText(getResources().getString(R.string.shortTermSummaryDescriptionNo));
+        }
+
+        TextView longTermSummaryDescription = findViewById(R.id.longTermSummaryTitle);
+        boolean highInterestDebt = store.getBoolean("highInterestDebt", false);
+        boolean longTermGoals = store.getBoolean("longTermChecked", false);
+        if (longTermGoals) {
+            longTermSummaryDescription.setText(getResources().getString(R.string.longTermSummaryDescriptionYes));
+        } else if (highInterestDebt) {
+            longTermSummaryDescription.setText(getResources().getString(R.string.longTermSummaryDescriptionNoDebts));
+        } else {
+            longTermSummaryDescription.setText(getResources().getString(R.string.longTermSummaryDescriptionNo));
+        }
     }
 
     public void startDebtAdvice(View view) {
