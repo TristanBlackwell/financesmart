@@ -28,7 +28,7 @@
     <string name="highInterestDebSwitchYes">Yes</string>
     <string name="HighInterestDebt">High Interest Debt</string>
     <string name="pensionSchemeTitle">Thinking of the future</string>
-    <string name="pensionSchemeDescription">For many people retirement feels like another lifetime away but it is never too early to consider your future self. You should ensure your are enrolled in your employer\'s automatic enrolment pension scheme. This is a minimum of 3%% extra pay in exchange for you contributing 4%% of your take-home pay. Enter below if you know your enrolled in such a scheme.</string>
+    <string name="pensionSchemeDescription">For many people retirement feels like another lifetime away but it is never too early to consider your future self. You should ensure your are enrolled in your employer\'s automatic enrolment pension scheme. This is a minimum of 3% extra pay in exchange for you contributing 4% of your take-home pay. Enter below if you know your enrolled in such a scheme.</string>
     <string name="pensionSchemeToggle">Pension scheme contribution</string>
     <string name="pensionSchemeToggleYes">Yes</string>
     <string name="pensionSchemeToggleNo">No</string>
@@ -91,5 +91,5 @@
     <string name="longTermSummaryTitle">Long term goals</string>
     <string name="longTermSummaryDescriptionYes">Here we can look at saving longer term. In the UK we really have two ideal options, a stocks and shares ISA and/or some form of pension. The most clear divide between selecting these is if you believe your goals should happen before retirement age therefore requiring access to funds that could not be obtained if held in a pension scheme. A stocks and shares ISA allows your money to be invested in stocks often in a fairly straightforward way that allows you to take advantage of the growth of the markets over time. This is can be particularly useful in low interest environments where money that may be set in a typical account is earning very little or none at all. * This is a very simplified view of longer term saving and interest, although the facts are generally true conditions can vary significantly and individual circumstances always differ so we suggest doing your our research before making any moneys with your current savings!</string>
     <string name="longTermSummaryDescriptionNoDebts">You don\'t have any long term goals really? Give this a good think over but if it\'s really true and you are free from other forms of debt as you mentioned then you should increase your discretionary spend budget and enough your hard earned wonga.</string>
-    <string name="longTermSummaryDescriptionNo">You don\'t have any long term goals really> Give this a good think over but if it\'s really true then clear off those high interest debts and consider increasing your discretionary spend budget. You will have earned it!</string>
+    <string name="longTermSummaryDescriptionNo">You don\'t have any long term goals really? Give this a good think over but if it\'s really true then clear off those high interest debts and consider increasing your discretionary spend budget. You will have earned it!</string>
 </resources>

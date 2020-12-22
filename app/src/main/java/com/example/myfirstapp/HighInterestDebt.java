@@ -106,15 +106,16 @@ public class HighInterestDebt extends AppCompatActivity {
 
     public void submitHighInterestDebt(View view) {
 
-        System.out.println(debts);
         SharedPreferences store = getApplicationContext().getSharedPreferences("store", MODE_PRIVATE);
         SharedPreferences.Editor editor = store.edit();
         editor.putBoolean("highInterestDebt", checked);
 
         // Convert debts arraylist to json for storage in SP (converted back when used
-        Gson gson = new Gson();
-        String json = gson.toJson(debts);
-        editor.putString("debtlist", json);
+        if (checked) {
+            Gson gson = new Gson();
+            String json = gson.toJson(debts);
+            editor.putString("debtlist", json);
+        }
 
         editor.apply();
 

@@ -23,15 +23,18 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="@string/takeHomeSummaryTitle"
+            android:textColor="@color/OnBackground"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/takeHomeSummaryValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
             android:gravity="center"
             android:paddingTop="5dp"
-            android:paddingBottom="5dp" />
+            android:paddingBottom="5dp"
+            android:textColor="@color/OnBackground" />
 
         <View
             android:layout_height="2dp"
@@ -47,15 +50,18 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="@string/outgoingsSummaryTitle"
+            android:textColor="@color/OnBackground"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/outgoingsSummaryValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
             android:gravity="center"
             android:paddingTop="5dp"
-            android:paddingBottom="5dp" />
+            android:paddingBottom="5dp"
+            android:textColor="@color/OnBackground" />
 
         <TextView
             android:id="@+id/outgoingsSummaryDescription"
@@ -65,7 +71,8 @@
             android:paddingLeft="25dp"
             android:paddingTop="5dp"
             android:paddingRight="25dp"
-            android:paddingBottom="5dp" />
+            android:paddingBottom="5dp"
+            android:textColor="@color/OnBackground" />
 
         <View
             android:layout_height="2dp"
@@ -81,15 +88,18 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="@string/emergencyFundSummaryTitle"
+            android:textColor="@color/OnBackground"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/emergencyFundSummaryValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
             android:gravity="center"
             android:paddingTop="5dp"
-            android:paddingBottom="5dp" />
+            android:paddingBottom="5dp"
+            android:textColor="@color/OnBackground" />
 
         <TextView
             android:id="@+id/emergencyFundSummaryDescription"
@@ -99,7 +109,8 @@
             android:paddingLeft="25dp"
             android:paddingTop="5dp"
             android:paddingRight="25dp"
-            android:paddingBottom="5dp" />
+            android:paddingBottom="5dp"
+            android:textColor="@color/OnBackground" />
 
         <View
             android:layout_height="2dp"
@@ -115,6 +126,7 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="@string/pensionSummaryTitle"
+            android:textColor="@color/OnBackground"
             android:textSize="18sp" />
 
         <TextView
@@ -125,7 +137,8 @@
             android:paddingLeft="25dp"
             android:paddingTop="5dp"
             android:paddingRight="25dp"
-            android:paddingBottom="5dp" />
+            android:paddingBottom="5dp"
+            android:textColor="@color/OnBackground" />
 
         <View
             android:layout_height="2dp"
@@ -134,7 +147,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/debtSummaryTitle"
@@ -146,6 +159,7 @@
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:text="@string/debtSummaryTitle"
+                android:textColor="@color/OnBackground"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toTopOf="@+id/debtSummaryDescription"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -161,6 +175,7 @@
                 android:paddingTop="5dp"
                 android:paddingRight="25dp"
                 android:paddingBottom="5dp"
+                android:textColor="@color/OnBackground"
                 app:layout_constraintBottom_toTopOf="@+id/debtSummaryButton"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
@@ -169,6 +184,8 @@
                 android:id="@+id/debtSummaryButton"
                 android:layout_width="wrap_content"
                 android:layout_height="39dp"
+                android:background="@color/PrimaryDark"
+                android:fontFamily="@font/roboto_medium"
                 android:gravity="center|center_horizontal"
                 android:onClick="startDebtAdvice"
                 android:paddingLeft="10dp"
@@ -176,24 +193,12 @@
                 android:paddingRight="10dp"
                 android:paddingBottom="10dp"
                 android:text="@string/debtSummaryButton"
+                android:textColor="#FFFFFF"
                 android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/debtListSummary" />
+                tools:layout_editor_absoluteY="79dp" />
 
-            <ListView
-                android:id="@+id/debtListSummary"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="25dp"
-                android:paddingTop="5dp"
-                android:paddingRight="25dp"
-                android:paddingBottom="5dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/debtSummaryDescription">
-
-            </ListView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <View
@@ -210,6 +215,7 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="@string/firstHomeSummaryTitle"
+            android:textColor="@color/OnBackground"
             android:textSize="18sp" />
 
         <TextView
@@ -220,7 +226,8 @@
             android:paddingLeft="25dp"
             android:paddingTop="5dp"
             android:paddingRight="25dp"
-            android:paddingBottom="5dp" />
+            android:paddingBottom="5dp"
+            android:textColor="@color/OnBackground" />
 
         <View
             android:layout_height="2dp"
@@ -236,6 +243,7 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="@string/shortTermSummaryTitle"
+            android:textColor="@color/OnBackground"
             android:textSize="18sp" />
 
         <TextView
@@ -246,7 +254,8 @@
             android:paddingLeft="25dp"
             android:paddingTop="5dp"
             android:paddingRight="25dp"
-            android:paddingBottom="5dp" />
+            android:paddingBottom="5dp"
+            android:textColor="@color/OnBackground" />
 
         <View
             android:layout_height="2dp"
@@ -262,6 +271,7 @@
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:text="@string/longTermSummaryTitle"
+            android:textColor="@color/OnBackground"
             android:textSize="18sp" />
 
         <TextView
@@ -272,7 +282,8 @@
             android:paddingLeft="25dp"
             android:paddingTop="5dp"
             android:paddingRight="25dp"
-            android:paddingBottom="5dp" />
+            android:paddingBottom="5dp"
+            android:textColor="@color/OnBackground" />
 
     </LinearLayout>
 </androidx.core.widget.NestedScrollView>

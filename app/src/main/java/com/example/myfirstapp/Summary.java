@@ -78,10 +78,10 @@ public class Summary extends AppCompatActivity {
         Type type = new TypeToken<ArrayList<Debt>>(){}.getType();
         debtList = gson.fromJson(json, type);
 
-        // Display debts previously entered
+        /* Display debts previously entered
         DebtAdapter debtAdapter = new DebtAdapter(this, debtList);
         ListView debtListSummary = findViewById(R.id.debtListSummary);
-        debtListSummary.setAdapter(debtAdapter);
+        debtListSummary.setAdapter(debtAdapter); */
 
         TextView debtSummaryDescription = findViewById(R.id.debtSummaryDescription);
         Button debtSummaryButton = findViewById(R.id.debtSummaryButton);

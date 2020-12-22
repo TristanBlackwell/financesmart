@@ -48,7 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@color/PrimaryDark"
-        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTint="@color/PrimaryDark"
         android:fontFamily="@font/roboto_medium"
         android:text="@string/shortTermToggle"
         android:textColor="#FFFFFF"
